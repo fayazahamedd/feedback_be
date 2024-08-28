@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // MongoDB connection URI
-const mongoURI = "mongodb://127.0.0.1:27017/mydb";
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mydb';
 
 // Connect to MongoDB
 mongoose
